@@ -2,6 +2,7 @@ import cv2
 import streamlit as st
 import mediapipe as mp
 
+
 st.title("Webcam Live Feed")
 
 cap = cv2.VideoCapture(0)
