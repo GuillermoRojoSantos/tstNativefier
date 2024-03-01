@@ -1,7 +1,10 @@
-import cv2
-import streamlit as st
-import mediapipe as mp
-import subprocess
+import sys
+import streamlit.web.cli as stcli
 
-if __name__ == '__main__':
-    subprocess.run("streamlit run main.py")
+def streamlit_run():
+    sys.argv = ["streamlit", "run", "main.py", "--global.developmentMode=false"]
+    sys.exit(stcli.main())
+
+
+if __name__ == "__main__":
+    streamlit_run()
